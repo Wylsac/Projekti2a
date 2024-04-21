@@ -1,0 +1,90 @@
+body {
+  font-family: Arial, sans-serif;
+  color: gold;
+  margin: 0;
+  padding: 0;
+  background-color: rgba(72, 117, 122, 1)
+}
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+#theater-label {
+  color: gold;
+  font-size: 18px;
+  margin-top: 10px;
+  display: none;
+  animation: moveUpDown 1.5s infinite alternate; /* Motion animation */
+}
+
+@keyframes moveUpDown {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-5px);
+  }
+}
+
+.theater-select {
+  margin-bottom: 10px;
+  border-radius: 7px;
+}
+
+.search-input {
+  margin-bottom: 20px;
+  width: calc(100% - 22px);
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 10px;
+}
+
+.movie-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.movie-item {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.movie-item img {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.movie-title {
+  font-weight: bold;
+  text-align: center;
+  color: gold;
+  transition: color 0.3s; /* Adding color transition animation */
+}
+
+.movie-title:hover {
+  color: white; /* Changing color on hover */
+}
+
+.movie-description {
+  display: none; /* Hiding description by default */
+  text-align: center;
+  margin-top: 5px;
+}
+
+.movie-item:hover .movie-description {
+  display: block; /* Showing description on element hover .movie-item */
+}
+
+.movie-item:hover {
+  border-color: gold; /* Golden border highlight on hover */
+}
