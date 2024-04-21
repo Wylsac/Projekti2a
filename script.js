@@ -21,7 +21,7 @@ findkino.addEventListener('click', () => {
 });
 
 // Fetch theater list from Finnkino API
-fetch('http://www.finnkino.fi/xml/TheatreAreas/')
+fetch('https://www.finnkino.fi/xml/TheatreAreas/')
   .then(response => response.text())
   .then(data => {
     const parser = new DOMParser();
@@ -67,7 +67,7 @@ function fetchMovies() {
     return; // Exit the function if no theater is selected
   }
 
-  let apiUrl = `http://www.finnkino.fi/xml/Schedule/?area=${selectedTheaterId}`;
+  let apiUrl = `https://www.finnkino.fi/xml/Schedule/?area=${selectedTheaterId}`;
 
   if (searchString !== '') {
     apiUrl += `&title=${encodeURIComponent(searchString)}`;
